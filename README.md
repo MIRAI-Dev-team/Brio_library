@@ -1,7 +1,19 @@
 # Brio Library
 
-A collection of resources and tools for \[briefly describe the purpose
-of the library, e.g., \"multimedia processing and AI development\"\].
+The tool is thought to be used for inspecting machine learning systems that 
+could be affected by biases in their predictions. 
+
+A typical scenario where the tool can help is the following: consider a database 
+containing details of individuals, with their age, gender, and level of education. 
+Consider an algorithm which tries to predict whether each of them is likely to default on credit. 
+The user wishes to check if age is a sensitive factor in such prediction. 
+The user feeds the tool our dataset, the output of the run of the predictive algorithm, and mark 
+the feature of age as sensitive. Currently the tool allows the user to compare either how the 
+behaviour of the algorithm with respect to age differs from an ``optimal'' behaviour 
+(in this case, the user might consider optimal the case where each age group equally succeeds), 
+or how different age groups perform with respect to one another.
+
+These two analyses take the names of FreqVsRef and FreqVsFreq, described in a section below. 
 
 ## License
 
@@ -45,6 +57,15 @@ You can install it via pip, doing `pip install brio`.
 The bias detection analyses can be performed directly using the `FreqVsRefBiasDetector` and `FreqVsFreqBiasDetector` 
 classes interfaces. 
 
+## Contact
+
+For development inquiries: dev@mirai.systems
+For research collaborations: research@mirai.systems
+
+## Resources
+
+Additional resources, documentation, and support materials are available at:
+https://mirai.systems/resources/
 
 **Please ensure you understand and comply with the CC BY-NC-ND license
 terms before using, sharing, or modifying this work.**
